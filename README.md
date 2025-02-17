@@ -18,27 +18,44 @@ git clone https://github.com/diegoagarza98/agentimo.git
 cd agentimo
 ```
 
-2. Open the project:
+2. Local Development:
 - You can use any static file server. For example, with Python:
 ```bash
-cd src
+cd public
 python3 -m http.server 3000
 ```
 - Or with Node.js's `http-server`:
 ```bash
 npm install -g http-server
-http-server src
+http-server public
 ```
 
 3. Open your browser and navigate to:
 - `http://localhost:3000` (or the port shown in your terminal)
 
+## Deployment
+
+This project is configured for deployment on Vercel:
+
+1. Install Vercel CLI:
+```bash
+npm install -g vercel
+```
+
+2. Deploy:
+```bash
+vercel
+```
+
+The project will be automatically deployed to Vercel using the `public` directory.
+
 ## Structure
 
-- `src/`
+- `public/` - Static files for deployment
   - `index.html` - Main HTML file
   - `styles.css` - CSS styles and animations
   - `script.js` - JavaScript for interactive features
+  - `assets/` - Images and other static assets
 
 ## Contributing
 
